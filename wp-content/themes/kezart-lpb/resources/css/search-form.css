@@ -1,0 +1,45 @@
+form.search-form {
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: --spacing(6);
+        height: --spacing(6);
+        background-image: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21.5002L17.5 18.0002M17 10.5002C17 14.3662 13.866 17.5002 10 17.5002C6.13401 17.5002 3 14.3662 3 10.5002C3 6.63425 6.13401 3.50024 10 3.50024C13.866 3.50024 17 6.63425 17 10.5002Z" stroke="%233D4BA8" stroke-width="2" stroke-linecap="round"/></svg>');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: --spacing(4);
+        margin-top: --spacing(-3);
+    }
+
+    & label {
+        display: block;
+        width: 100%;
+    }
+
+    & [type="search"] {
+        border: 1px solid var(--color-blue);
+        border-radius: --spacing(13.5);
+        width: 100%;
+        padding-left: --spacing(13.5);
+        padding-right: --spacing(4);
+        color: var(--color-violet);
+        font-size: var(--text-sm) !important;
+        line-height: --spacing(10);
+    }
+
+    & [type="submit"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}

@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@source "../../";
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@import "./fonts.css";
+@import "./theme.css";
+@import "./utilities.css";
+
+@import "./menu.css";
+@import "./posts-pagination.css";
+@import "./sidebar-blog.css";
+@import "./search-form.css";
+@import "./components/button.css";
+@import "./components/listbox.css";
+@import "./components/plan.css";
+@import "./components/form.css";
+@import "./components/breadcrumbs.css";
+@import "./components/hero.css";
+
+@import "../../node_modules/swiper/swiper-bundle.css";

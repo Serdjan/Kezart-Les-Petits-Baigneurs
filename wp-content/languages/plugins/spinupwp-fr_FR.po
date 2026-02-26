@@ -1,0 +1,184 @@
+# Translation of Plugins - SpinupWP - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - SpinupWP - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-14 16:53:49+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - SpinupWP - Stable (latest release)\n"
+
+#: src/Cli/CacheCommands.php:28 src/Cli/CacheCommands.php:54
+#: src/Cli/CacheCommands.php:88
+msgid "The page cache is not enabled."
+msgstr "Le cache de la page n’est pas activé."
+
+#: src/Cache.php:75
+msgid "Purge this URL"
+msgstr "Purger cette URL"
+
+#. translators: %1$s = Formatted object-cache.php file name, %2$s = Formatted
+#. wp-content directory name.
+#: drop-ins/object-cache.php:2957
+msgid "To disable Redis, delete the %1$s file in the %2$s directory."
+msgstr "Pour désactiver Redis, supprimez le fichier %1$s dans le répertoire %2$s."
+
+#. translators: %s = Link to installation instructions.
+#: drop-ins/object-cache.php:2950
+msgid "If you need help, please read the <a href=\"%s\">installation instructions</a>."
+msgstr "Si vous avez besoin d’aide, veuillez lire les <a href=\"%s\">instructions d’installation</a>."
+
+#: drop-ins/object-cache.php:2945
+msgid "Is the Redis server running?"
+msgstr "Le serveur Redis fonctionne-t-il ?"
+
+#: drop-ins/object-cache.php:2944
+msgid "Is the correct Redis host and port set?"
+msgstr "L’hôte et le port Redis sont-ils correctement définis ?"
+
+#. translators: %s = Formatted wp-config.php file name.
+#: drop-ins/object-cache.php:2939
+msgid "WordPress is unable to establish a connection to Redis. This means that the connection information in your %s file are incorrect, or that the Redis server is not reachable."
+msgstr "WordPress ne parvient pas à établir une connexion avec Redis. Cela signifie que les informations de connexion dans votre fichier %s sont incorrectes, ou que le serveur Redis n’est pas joignable."
+
+#: drop-ins/object-cache.php:2932
+msgid "Error establishing a Redis connection"
+msgstr "Erreur lors de l’établissement d’une connexion Redis"
+
+#: src/Cache.php:71
+msgid "Purge Page Cache"
+msgstr "Purger le cache de page"
+
+#: src/Cache.php:67
+msgid "Purge Object Cache"
+msgstr "Purger le cache objet"
+
+#: src/Cache.php:63
+msgid "Purge All Caches"
+msgstr "Purger tous les caches"
+
+#: src/AdminBar.php:57
+msgid "Cache"
+msgstr "Cache"
+
+#: src/Cli/CacheCommands.php:94
+msgid "URL could not be purged from the page cache."
+msgstr "L’URL n’a pas pu être purgée depuis le cache de page."
+
+#: src/Cli/CacheCommands.php:92
+msgid "URL purged from the page cache."
+msgstr "L’URL a été purgée depuis le cache de page."
+
+#: src/Cli/CacheCommands.php:68
+msgid "Post could not be purged from the page cache."
+msgstr "La publication n’a pas pu être purgée depuis le cache de page."
+
+#: src/Cli/CacheCommands.php:66
+msgid "Post purged from the page cache."
+msgstr "La publication a été purgée depuis le cache de page."
+
+#: src/Cli/CacheCommands.php:34
+msgid "The page cache could not be purged."
+msgstr "Le cache de la page n’a pas pu être purgé."
+
+#: src/Cli/CacheCommands.php:32
+msgid "The page cache was purged."
+msgstr "Le cache de la page a été purgé."
+
+#: src/Cli/Commands.php:59
+msgid "Object Cache: "
+msgstr "Cache objet : "
+
+#: src/Cli/Commands.php:52
+msgid "Page Cache: "
+msgstr "Cache de page : "
+
+#: src/Cli/Commands.php:49 src/Cli/Commands.php:56
+msgid "Enabled"
+msgstr "Activé"
+
+#: src/Cli/Commands.php:47 src/Cli/Commands.php:54
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: src/AdminNotices.php:122 src/Cli/Commands.php:33
+msgid "Object cache drop-in could not be updated."
+msgstr "L’extension avancée de cache objet n’a pas pu être mise à jour."
+
+#: src/AdminNotices.php:119 src/Cli/Commands.php:31
+msgid "Object cache drop-in updated."
+msgstr "L’extension avancée de cache objet a été mise à jour."
+
+#. translators: 1: WP_DEBUG_DISPLAY, 2: WP_DEBUG
+#: src/SiteHealth.php:72
+msgid "The value, %1$s, has either been enabled by %2$s or added to your configuration file. This will make errors display on the front end of your site."
+msgstr "La valeur %1$s, a été soit activée par %2$s ou ajoutée à votre fichier de configuration. Cela fera apparaître les erreurs sur l’interface publique de votre site."
+
+#: src/SiteHealth.php:64
+msgid "Your site is set to display errors to site visitors"
+msgstr "Votre site est défini pour afficher les erreurs aux visiteurs du site"
+
+#. translators: accessibility text
+#: src/SiteHealth.php:58
+msgid "(opens in a new tab)"
+msgstr "(s’ouvre dans un nouvel onglet)"
+
+#: src/SiteHealth.php:56
+msgid "Read about debugging in WordPress."
+msgstr "En savoir plus sur le débogage de WordPress."
+
+#. translators: Documentation explaining debugging in WordPress.
+#: src/SiteHealth.php:55
+msgid "https://wordpress.org/support/article/debugging-in-wordpress/"
+msgstr "https://fr.wordpress.org/support/article/debugging-in-wordpress/"
+
+#: src/SiteHealth.php:50
+msgid "Debug mode is often enabled to gather more details about an error or site failure, but may contain sensitive information which should not be available on a publicly available website."
+msgstr "Le mode débogage est souvent activé pour obtenir plus de détails à propos d’une erreur ou d’une défaillance du site, mais peut contenir des informations sensibles qui ne devraient pas être disponibles sur un site accessible au public."
+
+#: src/SiteHealth.php:45
+msgid "Security"
+msgstr "Sécurité"
+
+#: src/SiteHealth.php:42
+msgid "Your site is not set to output debug information"
+msgstr "Votre site n’est pas réglé pour afficher les informations de débogage"
+
+#: src/SiteHealth.php:24
+msgid "Debugging enabled"
+msgstr "Débogage activé"
+
+#: src/Cli/CacheCommands.php:60
+msgid "Post not found."
+msgstr "Publication non trouvée."
+
+#: src/AdminNotices.php:94
+msgid "The Redis Object Cache plugin has been deactivated and can be removed. The SpinupWP plugin now handles clearing the Redis object cache."
+msgstr "L’extension de cache objet Redis a été désactivée et peut être retirée. L’extension SpinupWP gère désormais l’effacement du cache objet Redis."
+
+#: src/AdminNotices.php:81
+msgid "More info"
+msgstr "Plus d’infos"
+
+#: src/AdminNotices.php:80
+msgid "Your site is ready to go! You will need to set up email if you wish to send outgoing emails from this site."
+msgstr "Votre site est prêt à fonctionner ! Vous devrez configurer l’e-mail si vous souhaitez envoyer des e-mails sortants à partir de ce site."
+
+#. Description of the plugin
+#: spinupwp.php
+msgid "SpinupWP helper plugin."
+msgstr "Extension d’assistance SpinupWP."
+
+#. Plugin URI of the plugin
+#: spinupwp.php
+msgid "https://spinupwp.com"
+msgstr "https://spinupwp.com"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: spinupwp.php
+msgid "SpinupWP"
+msgstr "SpinupWP"

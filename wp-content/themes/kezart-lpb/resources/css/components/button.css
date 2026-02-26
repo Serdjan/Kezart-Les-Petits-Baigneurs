@@ -1,0 +1,191 @@
+@layer components {
+    .button {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 300ms var(--ease-in-out);
+        border-width: 1px;
+        border-color: transparent;
+        column-gap: --spacing(2.5);
+        z-index: 0;
+
+        & span:not(.wave) {
+            position: relative;
+            z-index: 1;
+            transition: 1s;
+        }
+
+        & .wave {
+            display: block;
+            position: absolute;
+            top: calc(100% + 20px);
+            left: 0;
+            width: 100%;
+            height: calc(100% + 10px);
+            background: var(--color-blue);
+            transition: 1s;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -10px;
+                width: 100%;
+                height: 68px;
+                animation: animate 0.5s linear infinite;
+            }
+        }
+
+        &:hover {
+            & .wave {
+                top: -10px;
+            }
+        }
+    }
+
+    .button--base {
+        font-size: var(--text-base);
+        line-height: 1;
+        font-weight: 700;
+        height: --spacing(13);
+        padding-inline: --spacing(8);
+        border-radius: --spacing(12);
+    }
+
+    .button--mindbody {
+        width: 100%;
+
+        & span:not(.wave) {
+            width: calc(100% + 64px);
+            height: 100%;
+            margin: 0 -32px;
+
+            & .healcode-link {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .button--sm {
+        font-size: var(--text-xs);
+        height: --spacing(9);
+        padding-inline: --spacing(4);
+        border-radius: --spacing(12);
+        font-weight: 600;
+    }
+
+    .button--primary {
+        background-color: var(--color-orange);
+        color: var(--color-white);
+
+        &:hover {
+            border-color: var(--color-blue);
+        }
+
+        & .wave:before {
+            background: url('data:image/svg+xml;utf8,<svg width="48" height="20" viewBox="0 0 12 5" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C11.9888 0.0101654 6.32107 5.14327 0 0.000504099V2.89756C6.61845 7.62863 12 2.89656 12 2.89656V0Z" fill="%233D4BA8"/></svg>') repeat-x;
+        }
+
+        &.button--hover-quinary {
+            &:hover {
+                color: var(--color-blue);
+            }
+
+            & .wave {
+                background-color: var(--color-white);
+            }
+
+            & .wave:before {
+                background: url('data:image/svg+xml;utf8,<svg width="48" height="20" viewBox="0 0 12 5" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C11.9888 0.0101654 6.32107 5.14327 0 0.000504099V2.89756C6.61845 7.62863 12 2.89656 12 2.89656V0Z" fill="white"/></svg>') repeat-x;
+            }
+        }
+    }
+
+    .button--secondary {
+        border-color: var(--color-white);
+
+        & .wave:before {
+            background: url('data:image/svg+xml;utf8,<svg width="48" height="20" viewBox="0 0 12 5" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C11.9888 0.0101654 6.32107 5.14327 0 0.000504099V2.89756C6.61845 7.62863 12 2.89656 12 2.89656V0Z" fill="%233D4BA8"/></svg>') repeat-x;
+        }
+    }
+
+    .button--tertiary {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+
+        &:hover {
+            color: var(--color-blue);
+        }
+
+        & .wave {
+            background-color: var(--color-white);
+        }
+
+        & .wave:before {
+            background: url('data:image/svg+xml;utf8,<svg width="48" height="20" viewBox="0 0 12 5" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C11.9888 0.0101654 6.32107 5.14327 0 0.000504099V2.89756C6.61845 7.62863 12 2.89656 12 2.89656V0Z" fill="white"/></svg>') repeat-x;
+        }
+    }
+
+    .button--quaternary {
+        color: var(--color-blue);
+        border-color: var(--color-blue);
+
+        &:hover {
+            color: var(--color-white);
+        }
+
+        & .wave {
+            background-color: var(--color-blue);
+        }
+
+        & .wave:before {
+            background: url('data:image/svg+xml;utf8,<svg width="48" height="20" viewBox="0 0 12 5" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C11.9888 0.0101654 6.32107 5.14327 0 0.000504099V2.89756C6.61845 7.62863 12 2.89656 12 2.89656V0Z" fill="white"/></svg>') repeat-x;
+        }
+    }
+
+    .button--quinary {
+        color: var(--color-white);
+        border-color: var(--color-white);
+        background-color: var(--color-blue);
+
+        &:hover {
+            color: var(--color-blue);
+        }
+
+        & .wave {
+            background-color: var(--color-white);
+        }
+
+        & .wave:before {
+            background: url('data:image/svg+xml;utf8,<svg width="48" height="20" viewBox="0 0 12 5" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C11.9888 0.0101654 6.32107 5.14327 0 0.000504099V2.89756C6.61845 7.62863 12 2.89656 12 2.89656V0Z" fill="white"/></svg>') repeat-x;
+        }
+    }
+
+    .button--orange-hover {
+        &:hover {
+            color: var(--color-white);
+            border-color: var(--color-orange);
+        }
+        & .wave {
+            background-color: var(--color-orange);
+        }
+    }
+
+    @keyframes animate {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 52px;
+        }
+    }
+}

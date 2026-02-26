@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace RS\Theme\App\Core\Providers;
+
+use RS\Theme\App\Core\Config;
+use RS\Theme\App\Core\Interfaces\Service;
+
+class MenusServiceProvider implements Service
+{
+    public function register(): void
+    {
+        add_action('after_setup_theme', function (): void {
+            $menus = Config::instance()->get('menus');
+            if (empty($menus)) {
+                return;
+            }
+
+            register_nav_menus($menus);
+        });
+    }
+}

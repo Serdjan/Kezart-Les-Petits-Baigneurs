@@ -1,0 +1,89 @@
+@keyframes bougeVague {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000px 0; /* adapte la distance au besoin */
+    }
+}
+
+.bg-vagues {
+    background-image: url("../../images/vagues.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    animation: bougeVague 20s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .bg-vagues {
+        background-size: cover;
+    }
+}
+
+.poisson-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0px;
+    z-index: 1;
+}
+
+@keyframes deplacementPoisson {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100px; /* largeur approximative du poisson */
+    }
+}
+
+@keyframes sautPoisson {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-40px) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+.poisson {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation:
+            deplacementPoisson 10s linear infinite,
+            sautPoisson 2s ease-in-out infinite;
+}
+
+/* Promo Section */
+.promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.promo a {
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.promo a:hover {
+    transform: scale(1.02);
+    opacity: 0.95;
+}
+
+.promo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}

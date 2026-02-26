@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "d": "vite",
+    "b": "vite build"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.11",
+    "laravel-vite-plugin": "^2.0.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.14.9",
+    "@alpinejs/focus": "^3.14.9",
+    "@alpinejs/ui": "^3.14.9",
+    "alpinejs": "^3.14.9",
+    "gsap": "^3.13.0",
+    "swiper": "^11.2.10"
+  }
+}

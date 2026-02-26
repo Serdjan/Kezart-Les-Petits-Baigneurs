@@ -1,0 +1,39 @@
+{
+  "name": "ratkosolaja/theme-boilerplate",
+  "type": "wordpress-theme",
+  "autoload": {
+    "psr-4": {
+      "RS\\Theme\\App\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Ratko Solaja",
+      "email": "raso@hey.com"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "illuminate/contracts": "^v12.20.0",
+    "illuminate/support": "^v12.20.0",
+    "vlucas/phpdotenv": "^v5.6.2"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "laravel/pint": "v1.24.0"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env'); file_exists('.env') && unlink('.env.example');\""
+    ],
+    "pint": "./vendor/bin/pint app --preset psr12 && ./vendor/bin/pint functions.php --preset psr12",
+    "vite-local": "@php -r \"file_exists('vite.config.js') || copy('local-vite.config.js', 'vite.config.js'); file_exists('vite.config.js') && unlink('local-vite.config.js') && unlink('herd-vite.config.js');\"",
+    "vite-herd": "@php -r \"file_exists('vite.config.js') || copy('herd-vite.config.js', 'vite.config.js'); file_exists('vite.config.js') && unlink('herd-vite.config.js') && unlink('local-vite.config.js');\""
+  }
+}

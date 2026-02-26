@@ -1,0 +1,32 @@
+nav.navigation.pagination {
+    & .nav-links {
+        display: flex;
+        align-items: center;
+        gap: --spacing(2.5);
+
+        & > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: --spacing(14);
+            height: --spacing(14);
+            border-radius: calc(infinity * 1px);
+        }
+
+        & > .current {
+            background-color: var(--color-blue);
+            color: var(--color-white);
+        }
+
+        & > *:not(.current):not(.dots):not(.prev):not(.next) {
+            background-color: var(--color-white);
+            color: var(--color-blue-dark);
+        }
+
+        & .prev,
+        & .next {
+            background-color: var(--color-white);
+            color: var(--color-blue);
+        }
+    }
+}

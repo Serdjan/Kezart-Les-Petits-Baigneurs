@@ -1,0 +1,13 @@
+.rank-math-breadcrumb {
+    text-transform: uppercase;
+    color: var(--color-violet);
+    font-weight: 700;
+
+    & .last {
+        color: var(--color-blue);
+    }
+
+    & p > *:not(.last):not(.separator):hover {
+        text-decoration: underline;
+    }
+}

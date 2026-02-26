@@ -1,0 +1,50 @@
+.listbox {
+    position: relative;
+    font-size: var(--text-sm);
+
+    & .listbox__clear {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: --spacing(2);
+        color: var(--color-blue);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    & .listbox-button {
+        background-color: var(--color-white);
+        border-radius: --spacing(5);
+        padding-inline: --spacing(4);
+        height: --spacing(11);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: --spacing(50);
+        width: 100%;
+        cursor: pointer;
+    }
+
+    & .listbox-options {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        z-index: 100;
+        border-radius: --spacing(5);
+        overflow: hidden;
+    }
+
+    & .listbox-option {
+        padding: --spacing(4);
+        cursor: pointer;
+
+        &.listbox-active,
+        &:hover {
+            background-color: var(--color-blue);
+            color: var(--color-white);
+        }
+    }
+}

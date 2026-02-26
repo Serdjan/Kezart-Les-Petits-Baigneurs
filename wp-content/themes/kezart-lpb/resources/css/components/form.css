@@ -1,0 +1,71 @@
+.form-wrap {
+    border-radius: 20px;
+    border: 1px solid var(--color-blue);
+    padding: --spacing(10);
+    margin-bottom: --spacing(4.5);
+
+    & .form-wrap__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: --spacing(6);
+        row-gap: --spacing(8);
+    }
+
+    & .form-wrap__grid__full {
+        grid-column: 1 / -1;
+    }
+
+    & [type='text'],
+    & input:where(:not([type])),
+    & [type='email'], [type='url'],
+    & [type='password'],
+    & [type='number'],
+    & [type='date'],
+    & [type='datetime-local'],
+    & [type='month'],
+    & [type='search'],
+    & [type='tel'],
+    & [type='time'],
+    & [type='week'],
+    & [multiple],
+    & textarea,
+    & select {
+        width: 100%;
+        border-radius: 14px;
+        border-color: var(--color-white);
+        color: var(--color-blue-dark);
+        font-weight: 800;
+        padding-inline: --spacing(6);
+        padding-block: --spacing(4);
+
+        &::placeholder {
+            color: #D4D9FA;
+        }
+    }
+
+    & select {
+        color: #D4D9FA;
+    }
+}
+
+.wpcf7 {
+    & form > div:has([type="submit"]) {
+        margin-top: --spacing(8);
+        padding-inline: --spacing(10);
+    }
+
+    & .wpcf7-acceptance {
+        padding-inline: --spacing(10);
+
+        & .wpcf7-list-item {
+            padding: 0;
+            margin: 0;
+
+            & label {
+                display: flex;
+                align-items: center;
+                gap: --spacing(2.5);
+            }
+        }
+    }
+}

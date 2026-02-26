@@ -1,0 +1,68 @@
+services:
+  # WordPress FPM Alpine avec injection de notre contenu
+  wordpress:
+    image: wordpress:6.7.1-php8.3-fpm-alpine
+    container_name: wordpress
+    restart: unless-stopped
+    volumes:
+      - wordpress_files:/var/www/html
+      - ../wp-content:/var/www/html/wp-content
+      - ../wp-config.php:/var/www/html/wp-config.php:ro
+    environment:
+      WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    depends_on:
+      - mariadb
+    networks:
+      - wordpress-network
+
+  # Nginx (plus léger et plus rapide qu'Apache)
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - wordpress_files:/var/www/html:ro
+      - ../wp-content:/var/www/html/wp-content:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - wordpress
+    networks:
+      - wordpress-network
+
+  # MariaDB (plus léger que MySQL)
+  mariadb:
+    image: mariadb:11.4
+    container_name: mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    command: >
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --innodb-buffer-pool-size=128M
+      --innodb-log-file-size=64M
+      --max-connections=50
+      --query-cache-size=0
+      --query-cache-type=0
+    networks:
+      - wordpress-network
+
+volumes:
+  mariadb_data:
+    driver: local
+  wordpress_files:
+    driver: local
+
+networks:
+  wordpress-network:
+    driver: bridge

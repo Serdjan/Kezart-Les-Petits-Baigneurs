@@ -1,0 +1,76 @@
+@utility container {
+    margin-inline: auto;
+    max-width: var(--container-7xl) !important;
+    padding-inline: --spacing(16);
+
+    @media (width >= 80rem) {
+        max-width: var(--container-7xl);
+        padding-inline: 0;
+    }
+
+    @media (width <= 63.9375rem) {
+        padding-inline: --spacing(4);
+    }
+}
+
+@utility video-embed-wrap {
+    position: relative;
+    aspect-ratio: 2.14 / 1;
+    width: 100%;
+    height: 100%;
+
+    &:before {
+        position: absolute;
+        bottom: --spacing(-20);
+        left: calc((100vw - 100%) / 2 * -1);
+        right: 0;
+        width: 100vw;
+        height: 240px;
+        background: #E8EDFE;
+        content: "";
+        @apply hidden lg:block;
+    }
+
+    iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+}
+
+@utility prose {
+    --tw-prose-links: #3D4BA8;
+}
+
+@utility image-effect {
+    overflow: hidden;
+
+    & img {
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover > img {
+        transform: scale(1.2);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.card-hover:hover {
+    & img {
+        transform: scale(1.2);
+        transition: all 0.5s ease-in-out;
+    }
+    .button {
+        border-color: var(--color-blue);
+
+        & .wave {
+            top: 0;
+        }
+    }
+}

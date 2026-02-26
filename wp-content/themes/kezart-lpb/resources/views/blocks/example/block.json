@@ -1,0 +1,19 @@
+{
+  "name": "acf/example",
+  "title": "Example",
+  "description": "Example block that uses ACF fields.",
+  "style": [
+    "file:./example.css"
+  ],
+  "category": "theme",
+  "keywords": [
+    "example"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "example.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
