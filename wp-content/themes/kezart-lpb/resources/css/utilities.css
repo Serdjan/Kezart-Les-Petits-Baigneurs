@@ -74,3 +74,18 @@
         }
     }
 }
+
+#action h3 {
+    position: relative;
+    font-size: var(--text-32);
+    color: var(--color-blue-dark);
+    font-weight: 600;
+    margin-bottom: calc(var(--spacing)*5);
+}
+
+#action p {
+    font-size: var(--text-lg);
+    color: var(--color-blue);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    margin-bottom: calc(var(--spacing)*5);
+}
