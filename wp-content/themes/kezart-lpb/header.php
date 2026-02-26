@@ -12,7 +12,7 @@
     <link rel="pingback" href="<?php
                                 bloginfo('pingback_url'); ?>">
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe0Ol9v5t7zzA98k_nPMXHDABrca5RwHU">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmK88g2x7pwU3aRpLQNwuBq2NT8EtzLy8">
     </script>
 
     <?php
