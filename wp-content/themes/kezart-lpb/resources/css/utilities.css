@@ -75,17 +75,22 @@
     }
 }
 
-#action h3 {
+#action h1, #action h2, #action h3, #action h4, #action h5, #action h6 {
     position: relative;
     font-size: var(--text-32);
     color: var(--color-blue-dark);
     font-weight: 600;
-    margin-bottom: calc(var(--spacing)*5);
 }
 
 #action p {
     font-size: var(--text-lg);
     color: var(--color-blue);
     line-height: var(--tw-leading, var(--text-lg--line-height));
-    margin-bottom: calc(var(--spacing)*5);
+}
+
+#action ul {
+    font-size: var(--text-lg);
+    color: var(--color-blue);
+    list-style: revert;
+    padding: revert;
 }
